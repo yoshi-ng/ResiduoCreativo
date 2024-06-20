@@ -1,0 +1,14 @@
+--INSERT IGNORE INTO productos (nombre, imagen, descripcion, stock, precio) VALUES
+  --     ("productoDecoracion1","imagenDecoracion1","descripcion para el producto decoracion 1",5,5000),
+  --     ("productoDecoracion2","imagenDecoracion2","descripcion para el producto decoracion 2",8,2000),
+  --     ("productoVitral1","imagenVitral1","descripcion para el producto vitral 1",2,10000),
+  --     ("productoVitral","imagenvVitral2","descripcion para el producto vitral 4",10,1500),
+  --     ("productoDecoupage1","imagenDecoupage1","descripcion para el producto Decoupage 1",5,5500),
+  --     ("productoDecoupage2","imagenDecoupage2","descripcion para el producto Decoupage 2",3,3200),
+  --     ("productoJabon1","imagenJabon1","descipcion para el Jabon 1",10,1200),
+  --     ("productoJabon2","imagenJabon2","descripcion para el Jabon 2",12,1800),
+  --     ("productoTextil1","imagenTextil1","descripcion para el textil 1",5,7000),
+  --     ("productoTextil2","imagenTextil2","descripcion para el textil 2",3,9000);
+
+--INSERT IGNORE INTO categorias(nombre) VALUES
+  --     ("Decoracion"),("Vitral"),("Decoupage"),("Jabon"),("Textil");
