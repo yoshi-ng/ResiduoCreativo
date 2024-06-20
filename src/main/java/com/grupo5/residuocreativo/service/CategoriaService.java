@@ -17,8 +17,23 @@ public class CategoriaService {
         return categoriaRepository.findAll();
     }
 
-    public Categoria findCategoriaById(Long id) {
-        return categoriaRepository.findById(id).get();
+    public Categoria getCategoriaById(Long id) {
+        var categoriaId = categoriaRepository.findById(id);
+        return categoriaId.get();
+    }
+
+    public Categoria saveCategoria(Categoria categoria) {
+        Categoria categoriaGuardar = categoriaRepository.save(categoria);
+        return categoriaGuardar;
+    }
+
+    public Categoria updateCategoria(Categoria categoria) {
+        Categoria categoriaActualizar =  categoriaRepository.save(categoria);
+        return categoriaActualizar;
+    }
+
+    public void deleteCategoria(Long id) {
+        categoriaRepository.deleteById(id);
     }
 
 }

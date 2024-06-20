@@ -17,9 +17,23 @@ public class ProductoService {
         return productosRepository.findAll();
     }
 
-    public Producto findProductoById(Long id) {
-        var producto = productosRepository.findById(id);
-        return producto.get();
+    public Producto getProductoById(Long id) {
+        var productoId = productosRepository.findById(id);
+        return productoId.get();
+    }
+
+    public Producto saveProducto(Producto producto) {
+        Producto productoGuardar = productosRepository.save(producto);
+        return productoGuardar;
+    }
+
+    public Producto updateProducto(Producto producto) {
+        Producto productoActualizar = productosRepository.save(producto);
+        return productoActualizar;
+    }
+
+    public void deleteProducto(Long id) {
+        productosRepository.deleteById(id);
     }
 
 }

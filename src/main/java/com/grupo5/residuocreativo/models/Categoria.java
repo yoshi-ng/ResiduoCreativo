@@ -1,8 +1,8 @@
 package com.grupo5.residuocreativo.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -19,9 +19,11 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String nombre;
 
     @CreationTimestamp
+    @NotBlank
     private LocalDateTime fechaCreacion;
 
     @OneToMany(mappedBy = "categoriaProducto")
