@@ -3,18 +3,16 @@ package com.grupo5.residuocreativo.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
-@Table(name = "categorias")
+@Table(name = "regiones")
 @Data
 @NoArgsConstructor
-public class Categoria {
+public class Region {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +21,7 @@ public class Categoria {
     @NotBlank
     private String nombre;
 
-    @CreationTimestamp
-    private LocalDateTime fechaCreacion;
-
     @JsonIgnore
-    @OneToMany(mappedBy = "categoriaProducto")
-    private List<Producto> productoCategoria;
+    @OneToMany(mappedBy = "region")
+    private List<Comuna> comunaRegion;
 }

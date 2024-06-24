@@ -2,6 +2,7 @@ package com.grupo5.residuocreativo.service;
 
 import com.grupo5.residuocreativo.models.Producto;
 import com.grupo5.residuocreativo.repository.ProductoRepository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,16 +23,19 @@ public class ProductoService {
         return productoId.get();
     }
 
+    @Transactional
     public Producto saveProducto(Producto producto) {
         Producto productoGuardar = productosRepository.save(producto);
         return productoGuardar;
     }
 
+    @Transactional
     public Producto updateProducto(Producto producto) {
         Producto productoActualizar = productosRepository.save(producto);
         return productoActualizar;
     }
 
+    @Transactional
     public void deleteProducto(Long id) {
         productosRepository.deleteById(id);
     }

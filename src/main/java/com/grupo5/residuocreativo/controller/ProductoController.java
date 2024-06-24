@@ -1,6 +1,5 @@
 package com.grupo5.residuocreativo.controller;
 
-import com.grupo5.residuocreativo.models.Categoria;
 import com.grupo5.residuocreativo.models.Producto;
 import com.grupo5.residuocreativo.service.ProductoService;
 import jakarta.validation.Valid;
@@ -42,7 +41,7 @@ public class ProductoController {
         if (result.hasErrors()) {
             return new ResponseEntity<>("Verifique los campos", HttpStatus.NOT_ACCEPTABLE);
         }
-        return new ResponseEntity<>(productoService.saveProducto(productoActualizar) ,HttpStatus.CREATED);
+        return new ResponseEntity<>(productoService.updateProducto(productoActualizar) ,HttpStatus.CREATED);
     }
 
     @DeleteMapping("/eliminar")
