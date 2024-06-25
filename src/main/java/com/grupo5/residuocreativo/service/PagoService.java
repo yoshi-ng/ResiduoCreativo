@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class PagoService {
-
+/*darling*/
     @Autowired
     private PagoRepository pagoRepository;
 
