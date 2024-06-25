@@ -1,1 +1,1 @@
-residuo creativo pryecto para generation chile
+Residuo creativo proyecto para generation chile
