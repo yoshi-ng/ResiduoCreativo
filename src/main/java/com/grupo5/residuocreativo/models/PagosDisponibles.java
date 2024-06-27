@@ -1,5 +1,6 @@
 package com.grupo5.residuocreativo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -18,7 +19,12 @@ public class PagosDisponibles {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "pago_id", nullable = false)
+    @JoinColumn(name = "id_pago", nullable = false)
     private Pago pagos;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "id_tienda")
+    private Tienda tiendaPagosDisponibles;
 
 }

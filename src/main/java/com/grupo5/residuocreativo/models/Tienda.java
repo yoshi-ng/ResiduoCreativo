@@ -37,9 +37,6 @@ public class Tienda {
     private int telefono;
 
     @NotBlank
-    private String email;
-
-    @NotBlank
     private String direccion;
 
     @CreationTimestamp
@@ -53,5 +50,10 @@ public class Tienda {
     @ManyToOne
     @JoinColumn(name = "id_comuna")
     private Comuna tiendaComuna;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "tiendaPagosDisponibles")
+    private List<PagosDisponibles> pagosDisponiblesTienda;
+
 
 }
