@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.context.annotation.EnableMBeanExport;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -56,5 +57,8 @@ public class Tienda {
     @OneToMany(mappedBy = "tiendaPagosDisponibles")
     private List<PagoDisponible> pagosDisponiblesTienda;
 
+    @JsonIgnore
+    @OneToOne
+    private Emprendedor id_emprendedor;
 
 }
