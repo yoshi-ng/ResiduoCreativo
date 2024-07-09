@@ -1,6 +1,6 @@
 package com.grupo5.ResiduoCreativo.models;
 
-import com.grupo5.residuocreativo.models.Producto;
+import com.grupo5.ResiduoCreativo.models.Producto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
