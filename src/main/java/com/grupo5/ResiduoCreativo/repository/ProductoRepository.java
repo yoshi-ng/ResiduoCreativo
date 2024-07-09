@@ -1,6 +1,6 @@
 package com.grupo5.ResiduoCreativo.repository;
 
-import com.grupo5.ResiduoCreativo.models.Producto;
+import com.grupo5.residuocreativo.models.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
