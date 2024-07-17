@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@CrossOrigin("*")//Libreria CORS indica que cualquier url puede ingresar
 @RestController
 @RequestMapping("/api/producto")
 public class ProductoController {
